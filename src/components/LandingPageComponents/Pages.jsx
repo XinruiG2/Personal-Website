@@ -76,14 +76,14 @@ const ProjectsBubble = styled.div`
     transition: all 0.25s ease-in-out;
 
     &:hover {
-        letter-spacing: 0.3rem;
+        letter-spacing: 0.25rem;
         cursor: pointer;
     }
 `;
 
 const Pages = () => {
 
-    const[contactText, setContactText] = useState('Contact me');
+    const[contactText, setContactText] = useState('Contact');
     const [textVisible, setTextVisible] = useState(true);
     const navigate = useNavigate();
 
@@ -92,11 +92,11 @@ const Pages = () => {
     }
 
     const navigateToExperience = () => {
-    navigate("/experience");
+    navigate("/about-me");
     }
 
     const navigateToContact = () => {
-    navigate("/contact-me");
+    navigate("/contact");
     }
 
     const handleContactHover = () => {
@@ -104,22 +104,22 @@ const Pages = () => {
         setTimeout(() => {
             setContactText("LinkedIn & E-mail");
             setTextVisible(true);
-        }, 200);
+        }, 175);
     }
 
     const handleContactLeave = () => {
         setTextVisible(false);
         setTimeout(() => {
-            setContactText("Contact me");
+            setContactText("Contact");
             setTextVisible(true);
-        }, 200);
+        }, 175);
     }
 
   return (
     <Container>
         <TopRow>
             <ProjectsBubble onClick={navigateToProjects}>Projects</ProjectsBubble>
-            <ExperienceBubble onClick={navigateToExperience}>Experience</ExperienceBubble>
+            <ExperienceBubble onClick={navigateToExperience}>About Me</ExperienceBubble>
         </TopRow>
         <ContactBubble
             onMouseEnter={handleContactHover}

@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from 'styled-components'
-import Menu from '../Menu';
+import Menu from './Menu';
 
 const Container = styled.div`
     display: flex;
@@ -15,10 +15,10 @@ const PageHeader = styled.div`
     margin: 0 0 -6px 0
 `;
 
-const Header = () => {
+const Header = ({ name }) => {
   return (
     <Container>
-        <PageHeader>Projects</PageHeader>
+        <PageHeader>{name}</PageHeader>
         <Menu />
     </Container>
   )

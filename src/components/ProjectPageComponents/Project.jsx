@@ -56,7 +56,7 @@ const ProjectDetails = styled.div`
     }
 `;
 
-const Project = ({ bgColor, fontColor, name, languages, date }) => {
+const Project = ({ bgColor, fontColor, name, languages, date, handleClick }) => {
 
     const projectLanguages = languages.join(", ");
 
@@ -65,7 +65,7 @@ const Project = ({ bgColor, fontColor, name, languages, date }) => {
         <Name>{name}</Name>
         <SubTopics>Languages: {projectLanguages}</SubTopics>
         <SubTopics>{date}</SubTopics>
-        <ProjectDetails color={fontColor}>
+        <ProjectDetails color={fontColor} onClick={handleClick}>
             View full details &gt;
         </ProjectDetails>
     </Container>

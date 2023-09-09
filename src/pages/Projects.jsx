@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { styled, keyframes} from 'styled-components'
 import Background from '../components/Background';
-import Header from '../components/ProjectPageComponents/Header';
+import Header from '../components/Header';
 import ProjectCards from '../components/ProjectPageComponents/ProjectCards';
 
 const fadeIn = keyframes`
@@ -14,11 +14,11 @@ const fadeIn = keyframes`
 
 const FadeInContainer = styled.div`
     opacity: 0;
-    animation: fadeIn 1s forwards;
+    animation: fadeIn 0.85s forwards;
 `;
 
 const Container = styled(FadeInContainer)`
-    animation: ${fadeIn} 1s forwards;
+    animation: ${fadeIn} 0.85s forwards;
     width: 100%;
     overflow-y: auto;
     height: 100%;
@@ -30,11 +30,30 @@ const Container = styled(FadeInContainer)`
 `;
 
 const Projects = () => {
+
+  const [showingDetails, setShowingDetails] = useState(false);
+
+  useEffect(() => {
+    const handlePopstate = () => {
+      if (showingDetails) {
+        setShowingDetails(false);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopstate);
+
+    return () => {
+      window.removeEventListener('popstate', handlePopstate);
+    };
+  }, [showingDetails]); 
+
   return (
     <Container>
-        <Header />
-        <ProjectCards />
-        <Background />
+        <Header name="Projects"/>
+        <ProjectCards 
+          setShowingDetails={setShowingDetails} 
+          showingDetails={showingDetails}/>
+        {!showingDetails && <Background />}
     </Container>
   )
 }

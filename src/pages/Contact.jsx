@@ -1,5 +1,6 @@
 import React from 'react'
 import { styled, keyframes} from 'styled-components'
+import Header from '../components/Header';
 
 const fadeIn = keyframes`
     from {
@@ -11,17 +12,18 @@ const fadeIn = keyframes`
 
 const FadeInContainer = styled.div`
     opacity: 0;
-    animation: fadeIn 1s forwards;
+    animation: fadeIn 0.85s forwards;
 `;
 
 const Container = styled(FadeInContainer)`
-    animation: ${fadeIn} 1s forwards;
+    animation: ${fadeIn} 0.85s forwards;
+    width: 100%;
 `;
 
 const Contact = () => {
   return (
     <Container>
-        contact
+        <Header name="Contact"/>
     </Container>
   )
 }

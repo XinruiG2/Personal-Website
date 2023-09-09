@@ -34,18 +34,18 @@ const Menu = () => {
   }
 
   const navigateToExperience = () => {
-    navigate("/experience");
+    navigate("/about-me");
   }
 
   const navigateToContact = () => {
-    navigate("/contact-me");
+    navigate("/contact");
   }
 
   return (
     <Container>
         <MenuOption onClick={navigateToHome}>Home</MenuOption>
         <MenuOption onClick={navigateToProjects}>Projects</MenuOption>
-        <MenuOption onClick={navigateToExperience}>Experience</MenuOption>
+        <MenuOption onClick={navigateToExperience}>About</MenuOption>
         <MenuOption onClick={navigateToContact}>Contact</MenuOption>
     </Container>
   )

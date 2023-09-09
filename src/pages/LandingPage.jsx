@@ -14,11 +14,11 @@ const fadeIn = keyframes`
 
 const FadeInContainer = styled.div`
     opacity: 0;
-    animation: fadeIn 1s forwards;
+    animation: fadeIn 0.85s forwards;
 `;
 
 const Container = styled(FadeInContainer)`
-    animation: ${fadeIn} 1s forwards;
+    animation: ${fadeIn} 0.85s forwards;
     width: 100%;
     display: flex;
     align-items: center;
@@ -34,7 +34,7 @@ const Circle = styled.div`
     top: 50%;
     transform: translateY(-50%);
     right: -25vh;
-    box-shadow: rgb(29, 29, 29) -10px 10px 30px 30px;
+    box-shadow: rgb(33, 33, 33) -10px 10px 30px 30px;
     overflow: hidden;
 
     &:before {
