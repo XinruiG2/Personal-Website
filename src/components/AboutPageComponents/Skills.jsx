@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-    margin-top: 15px;
+    margin-top: 17px;
     margin-bottom: 50px;
     padding-bottom: 50px;
     border-bottom: 1.5px solid rgb(135, 135, 135);
@@ -16,7 +16,7 @@ const SkillsContainer = styled.div`
 `;
 
 const Skill = styled.div`
-    padding: 5px 8px;
+    padding: 5px 9px;
     background-color: rgb(120, 120, 120, 0.88);
     color: white;
     border-radius: 5px;
@@ -29,7 +29,7 @@ const DownloadCV = styled.div`
     font-weight: 600;
     font-size: 0.9rem;
     letter-spacing: 0.025rem;
-    margin-top: 15px;
+    margin-top: 20px;
     padding-bottom: 3px;
     position: relative;
     width: fit-content;

@@ -42,7 +42,7 @@ const ListItem = styled.li`
 `;
 
 const TidbitContainer = styled.div`
-    margin-top: 28px;
+    margin-top: 30px;
 `;
 
 const InformationContainer = () => {
@@ -84,7 +84,7 @@ const InformationContainer = () => {
         <TidbitContainer>
             <Music></Music>
             <Tidbit
-                bgColor="rgb(212, 218, 200)"
+                bgColor="rgb(196, 205, 225)"
                 label="Favorite dish"
                 description="Mala xiang guo"
                 icon="dining"></Tidbit>

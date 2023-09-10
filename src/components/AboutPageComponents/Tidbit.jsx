@@ -9,7 +9,7 @@ const Container = styled.div`
     justify-content: start;
     align-items: center;
     padding: 20px 20px 22px 22px;
-    margin-top: 17px;
+    margin-top: 18px;
     gap: 5px;
 `;
 

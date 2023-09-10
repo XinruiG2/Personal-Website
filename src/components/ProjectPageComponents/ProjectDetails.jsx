@@ -18,10 +18,11 @@ const BackButton = styled.div`
     font-weight: 500;
     font-size: 0.87rem;
     color: rgb(29, 29, 29);
-    margin-top: 30px;
+    margin-top: 29px;
     letter-spacing: 0.025rem;
     width: fit-content;
     transition: all 0.25s ease-in-out;
+    padding-bottom: 1px;
 
     &:hover {
         cursor: pointer;

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { styled, keyframes} from 'styled-components'
 import Background from '../components/Background';
-import Header from '../components/Header';
 import ProjectCards from '../components/ProjectPageComponents/ProjectCards';
+import ProjectHeader from '../components/ProjectPageComponents/ProjectHeader';
 
 const fadeIn = keyframes`
     from {
@@ -33,23 +33,9 @@ const Projects = () => {
 
   const [showingDetails, setShowingDetails] = useState(false);
 
-  useEffect(() => {
-    const handlePopstate = () => {
-      if (showingDetails) {
-        setShowingDetails(false);
-      }
-    };
-
-    window.addEventListener('popstate', handlePopstate);
-
-    return () => {
-      window.removeEventListener('popstate', handlePopstate);
-    };
-  }, [showingDetails]); 
-
   return (
     <Container>
-        <Header name="Projects"/>
+        <ProjectHeader name="Projects" setDetails={setShowingDetails}/>
         <ProjectCards 
           setShowingDetails={setShowingDetails} 
           showingDetails={showingDetails}/>

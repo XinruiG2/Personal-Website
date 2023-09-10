@@ -47,7 +47,7 @@ const Images = () => {
         <Row>
             <ImageContainer>
                 <Image src={pfp} />
-                <ImageDescription>A picture of me :{')'}</ImageDescription>
+                <ImageDescription>Nice to meet you :{')'}</ImageDescription>
             </ImageContainer>
             <ImageContainer>
                 <Image src={smiski} />
