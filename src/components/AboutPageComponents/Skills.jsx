@@ -4,6 +4,8 @@ import styled from 'styled-components'
 const Container = styled.div`
     margin-top: 15px;
     margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1.5px solid rgb(135, 135, 135);
 `;
 
 const SkillsContainer = styled.div`

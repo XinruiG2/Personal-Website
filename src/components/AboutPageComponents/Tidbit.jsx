@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Headphones } from '@mui/icons-material';
+import { Headphones, LocalDining, AutoAwesome } from '@mui/icons-material';
 
 const Container = styled.div`
-    background-color: rgb(233, 226, 216);
+    background-color: ${(props) => props.color};
     border-radius: 45px;
     display: flex;
     justify-content: start;
@@ -11,10 +11,6 @@ const Container = styled.div`
     padding: 20px 20px 22px 22px;
     margin-top: 17px;
     gap: 5px;
-
-    &:hover {
-        cursor: pointer;
-    }
 `;
 
 const Headset = styled(Headphones)`
@@ -22,6 +18,24 @@ const Headset = styled(Headphones)`
     background-color: rgb(85, 85, 85);
     border-radius: 50%;
     padding: 6px;
+    font-size: 1.5rem !important;
+    margin-bottom: -2.5px;
+`;
+
+const Food = styled(LocalDining)`
+    fill: rgb(235, 228, 218) !important;
+    background-color: rgb(85, 85, 85);
+    border-radius: 50%;
+    padding: 6px;
+    font-size: 1.5rem !important;
+    margin-bottom: -3px;
+`;
+
+const Stars = styled(AutoAwesome)`
+    fill: rgb(235, 228, 218) !important;
+    background-color: rgb(85, 85, 85);
+    border-radius: 50%;
+    padding: 6px 7px 6px 5px;
     font-size: 1.5rem !important;
     margin-bottom: -2.5px;
 `;
@@ -36,17 +50,17 @@ const TextContainer = styled.div`
     font-size: 0.88rem; 
 `;
 
-const OnRepeat = styled.div`
+const Label = styled.div`
     color: rgb(85, 85, 85);
     font-weight: 500; 
 `;
 
-const Song = styled.div`
+const Description = styled.div`
     color: rgb(85, 85, 85);
     font-weight: 700;
 `;
 
-const Music = () => {
+const Music = ({bgColor, label, description, icon}) => {
 
     const visitSong = () => {
         const songUrl = 'https://open.spotify.com/album/34zREEtZQOmQbqFU4cIQuT';
@@ -54,11 +68,12 @@ const Music = () => {
     }
 
   return (
-    <Container onClick={visitSong}>
-        <Headset/>
+    <Container color={bgColor} onClick={visitSong}>
+        {(icon === "dining") && <Food />}
+        {(icon === "life") && <Stars />}
         <TextContainer>
-            <OnRepeat>On repeat</OnRepeat>
-            <Song>Niki - High School in Jakarta</Song>
+            <Label>{label}</Label>
+            <Description>{description}</Description>
         </TextContainer>
     </Container>
   )

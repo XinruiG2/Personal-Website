@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Skills from './Skills';
+import Tidbit from './Tidbit';
+import Music from './Music';
 
 const Container = styled.div`
     color: rgb(29, 29, 29);
@@ -39,7 +41,17 @@ const ListItem = styled.li`
     letter-spacing: 0.015rem;
 `;
 
+const TidbitContainer = styled.div`
+    margin-top: 28px;
+`;
+
 const InformationContainer = () => {
+
+    const visitSong = () => {
+        const songUrl = 'https://open.spotify.com/album/34zREEtZQOmQbqFU4cIQuT';
+        window.open(songUrl, '_blank');
+    }
+
   return (
     <Container>
         <Background>
@@ -69,6 +81,19 @@ const InformationContainer = () => {
             <ListItem>Eating with friends</ListItem>
             <ListItem>Listening to music</ListItem>
         </List>
+        <TidbitContainer>
+            <Music></Music>
+            <Tidbit
+                bgColor="rgb(212, 218, 200)"
+                label="Favorite dish"
+                description="Mala xiang guo"
+                icon="dining"></Tidbit>
+            <Tidbit
+                bgColor="rgb(233, 226, 216)"
+                label="Recent obsession"
+                description="Skull Candy headphones"
+                icon="life"></Tidbit>
+        </TidbitContainer>
     </Container>
   )
 }
