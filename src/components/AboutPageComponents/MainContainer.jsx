@@ -8,6 +8,7 @@ const Container = styled.div`
     grid-template-columns: 0.48fr 0.52fr;
     margin-top: 37px;
     gap: 45px;
+    z-index: 100;
 `;
 
 const MainContainer = () => {

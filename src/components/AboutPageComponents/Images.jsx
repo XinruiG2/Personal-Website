@@ -9,6 +9,7 @@ import wolfie from '../../images/wolfie.jpeg'
 
 const Container = styled.div`
     width: 100%;
+    z-index: 100;
 `;
 
 const Row = styled.div`

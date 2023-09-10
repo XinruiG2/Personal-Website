@@ -2,6 +2,7 @@ import React from 'react'
 import { styled, keyframes} from 'styled-components'
 import Header from '../components/Header';
 import MainContainer from '../components/AboutPageComponents/MainContainer';
+import BackgroundTwo from '../components/BackgroundTwo';
 
 const fadeIn = keyframes`
     from {
@@ -32,6 +33,7 @@ const Experience = () => {
     <Container>
         <Header name="About Me"/>
         <MainContainer></MainContainer>
+        <BackgroundTwo />
     </Container>
   )
 }
