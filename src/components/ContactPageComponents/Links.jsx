@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import githubIcon from '../../images/github-mark-white.png'
 import linkedInIcon from '../../images/linkedIn-icon.png'
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
     width: 100%;
@@ -10,7 +11,7 @@ const Container = styled.div`
     gap: 14px;
     grid-template-columns: 1fr;
     box-sizing: border-box;
-    padding: 1.25rem 0 1rem 0;
+    padding: 1.25rem 0 0.9rem 0;
 `;
 
 const Row = styled.div`
@@ -72,10 +73,24 @@ const Icon = styled.img`
 `;
 
 const Links = () => {
+
+    const mailto = "mailto:xinrui.ge24@gmail.com";
+
+    function navigateToLinkedIn() {
+        const newURL = 'https://www.linkedin.com/in/xinrui-ge-14b563262/';
+        window.open(newURL, '_blank');
+    }
+
+    function navigateToGithub() {
+        const newURL = 'https://github.com/XinruiG2';
+        window.open(newURL, '_blank');
+    }
+      
+
   return (
     <Container>
         <Row>
-            <Bubble padding="50px">
+            <Bubble padding="50px" onClick={navigateToLinkedIn}>
                 <IconWrapper>
                     <Icon 
                         src={linkedInIcon}/>
@@ -83,11 +98,20 @@ const Links = () => {
             </Bubble>
         </Row>
         <Row>
-            <HalfBubble>xinrui.ge24@gmail.com</HalfBubble>
+            <HalfBubble
+                onClick={() => {
+                    window.location.href = 'mailto:xinrui.ge24@gmail.com';
+                }}>
+                <Link
+                to='#'
+                style={{textDecoration: 'none', color: "rgb(29, 29, 29)"}}>
+                    xinrui.ge24@gmail.com
+                </Link>
+            </HalfBubble>
             <HalfBubble>{'('}718{')'} 791-5306</HalfBubble>
         </Row>
         <Row>
-            <Bubble padding="52px 50px 48px 50px">
+            <Bubble padding="52px 50px 48px 50px" onClick={navigateToGithub}>
                 <IconWrapper margin="-2px">
                     <Icon 
                         src={githubIcon}/>

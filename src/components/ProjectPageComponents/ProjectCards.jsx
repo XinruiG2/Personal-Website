@@ -4,6 +4,8 @@ import Project from './Project';
 import ProjectDetails from './ProjectDetails';
 import mealGenerator from '../../images/mealGenerator.png'
 import newsHomepage from '../../images/newsHomepage.png'
+import battleship from '../../images/battleship.png'
+import planner from '../../images/planner.png'
 
 const Container = styled.div`
     width: 100%;
@@ -37,8 +39,6 @@ const ProjectCards = ({ setShowingDetails, showingDetails }) => {
   const [showMeal, setShowMeal] = useState(false);
   const [showBattleship, setShowBattleship] = useState(false);
   const [showPlanner, setShowPlanner] = useState(false);
-  const [showMinesweeper, setShowMinesweeper] = useState(false);
-  const [showColdCalling, setShowColdCalling] = useState(false);
   const [showNews, setShowNews] = useState(false);
 
   const handleMealClick = () => {
@@ -46,8 +46,6 @@ const ProjectCards = ({ setShowingDetails, showingDetails }) => {
     setShowMeal(true);
     setShowBattleship(false);
     setShowPlanner(false);
-    setShowMinesweeper(false);
-    setShowColdCalling(false);
     setShowNews(false);
   }
 
@@ -56,8 +54,6 @@ const ProjectCards = ({ setShowingDetails, showingDetails }) => {
     setShowMeal(false);
     setShowBattleship(true);
     setShowPlanner(false);
-    setShowMinesweeper(false);
-    setShowColdCalling(false);
     setShowNews(false);
   }
 
@@ -66,28 +62,6 @@ const ProjectCards = ({ setShowingDetails, showingDetails }) => {
     setShowMeal(false);
     setShowBattleship(false);
     setShowPlanner(true);
-    setShowMinesweeper(false);
-    setShowColdCalling(false);
-    setShowNews(false);
-  }
-
-  const handleMinesweeperClick = () => {
-    setShowingDetails(true);
-    setShowMeal(false);
-    setShowBattleship(false);
-    setShowPlanner(false);
-    setShowMinesweeper(true);
-    setShowColdCalling(false);
-    setShowNews(false);
-  }
-
-  const handleColdCallingClick = () => {
-    setShowingDetails(true);
-    setShowMeal(false);
-    setShowBattleship(false);
-    setShowPlanner(false);
-    setShowMinesweeper(false);
-    setShowColdCalling(true);
     setShowNews(false);
   }
 
@@ -96,10 +70,19 @@ const ProjectCards = ({ setShowingDetails, showingDetails }) => {
     setShowMeal(false);
     setShowBattleship(false);
     setShowPlanner(false);
-    setShowMinesweeper(false);
-    setShowColdCalling(false);
     setShowNews(true);
   }
+
+  const mealGeneratorDescription = 
+    "I created 'Meal Generator' because I wanted to have a tool for helping"
+    + " me when I didn't know what to cook. Since it was my first time having"
+    + " access to a kitchen in my dorm, I was nervous about efficiently using all of my groceries and planning my meals."
+    + " However, building this application really helped me out when I was on a time crunch"
+    + " and didn't have much time to decide what to make with food in my fridge."
+
+  const mealGeneratorMeaning = 
+    "'Meal Generator' was my first project done using React outside of work. So, it really gave me the freedom "
+    + "to explore more interesting UI designs and make considerations about layouts on my own.";
 
   return (
     <div>
@@ -131,22 +114,6 @@ const ProjectCards = ({ setShowingDetails, showingDetails }) => {
               <Project 
                 bgColor={paleBlue} 
                 fontColor={almostBlack}
-                name="Minesweeper"
-                languages={["Java"]}
-                date="Feb 2021"
-                handleClick={handleMinesweeperClick} />
-          </Row>
-          <Row>
-              <Project 
-                bgColor={beige} 
-                fontColor={almostBlack}
-                name="Cold-calling App"
-                languages={["Java"]}
-                date="Oct 2021"
-                handleClick={handleColdCallingClick} />
-              <Project 
-                bgColor={softBlack} 
-                fontColor={almostWhite}
                 name="News Homepage"
                 languages={["HTML", "CSS"]}
                 date="Jan 2023"
@@ -160,39 +127,29 @@ const ProjectCards = ({ setShowingDetails, showingDetails }) => {
             languages="Java"
             projectImage={mealGenerator}
             redirectLink="https://github.com/XinruiG2/Meal-Generator.git"
-            setDetails={setShowingDetails} />}
+            setDetails={setShowingDetails}
+            description={mealGeneratorDescription}
+            meaning={mealGeneratorMeaning} />}
 
         {showBattleship && 
           <ProjectDetails 
             name="Battleship"
             languages="JavaScript, HTML, CSS"
-            projectImage={mealGenerator}
+            projectImage={battleship}
             redirectLink="https://github.com/CS-3500-OOD/pa03-XinruiG2.git"
-            setDetails={setShowingDetails} />}
+            setDetails={setShowingDetails}
+            description=""
+            meaning="" />}
 
         {showPlanner && 
         <ProjectDetails 
           name="Planner GUI"
           languages="Java"
-          projectImage={mealGenerator}
+          projectImage={planner}
           redirectLink="https://github.com/CS-3500-OOD/pa05-miffies.git"
-          setDetails={setShowingDetails} />}
-
-        {showMinesweeper && 
-        <ProjectDetails 
-          name="Minesweeper"
-          languages="Java"
-          projectImage={mealGenerator}
-          redirectLink="https://github.com/CS-3500-OOD/pa05-miffies.git"
-          setDetails={setShowingDetails} />}
-
-        {showColdCalling && 
-        <ProjectDetails 
-          name="Cold-calling App"
-          languages="Java"
-          projectImage={mealGenerator}
-          redirectLink="https://github.com/XinruiG2/ColdCallingProject.git"
-          setDetails={setShowingDetails} />}
+          setDetails={setShowingDetails}
+          description=""
+          meaning="" />}
 
         {showNews && 
         <ProjectDetails 
@@ -200,7 +157,9 @@ const ProjectCards = ({ setShowingDetails, showingDetails }) => {
           languages="HTML, CSS"
           projectImage={newsHomepage}
           redirectLink="https://github.com/XinruiG2/News-Homepage.git"
-          setDetails={setShowingDetails} />}
+          setDetails={setShowingDetails}
+          description=""
+          meaning="" />}
       </div>}
     </div>
   )

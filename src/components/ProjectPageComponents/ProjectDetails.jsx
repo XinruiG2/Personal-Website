@@ -82,7 +82,8 @@ const SubText = styled.div`
     line-height: 1.4;
     letter-spacing: 0.025rem;
     color: rgb(29, 29, 29);
-    margin-top: 32px;
+    margin-top: 27px;
+    padding-right: 10px;
 `;
 
 const CodeRedirect = styled.div`
@@ -116,8 +117,8 @@ const CodeRedirect = styled.div`
     }
 `;
 
-const ProjectDetails = ({ name, languages, projectImage, 
-                            redirectLink, setDetails }) => {
+const ProjectDetails = ({ name, languages, projectImage, redirectLink, 
+                            setDetails, description, meaning }) => {
 
     const redirectToCode = () => {
         window.open(redirectLink, '_blank');
@@ -138,11 +139,10 @@ const ProjectDetails = ({ name, languages, projectImage,
                     <Name>{name}</Name>
                     <Languages>{languages}</Languages>
                     <SubText>
-                        Brief description about this project.
-                        Talk about what it aims to achieve & how it can be used . . .
+                        {description}
                     </SubText>
                     <SubText>
-                        Why it's meaningful to you and how it helped you grow your skills . . .
+                        {meaning}
                     </SubText>
                 </div>
                 <CodeRedirect onClick={redirectToCode}>
