@@ -66,7 +66,7 @@ const Skills = () => {
             <Skill>Python</Skill>
         </SkillsContainer>
         <DownloadCV>
-            Download my CV &gt;
+            Download my resume &gt;
         </DownloadCV>
     </Container>
   )

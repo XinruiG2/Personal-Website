@@ -13,15 +13,6 @@ const Container = styled.div`
     gap: 5px;
 `;
 
-const Headset = styled(Headphones)`
-    fill: rgb(235, 228, 218) !important;
-    background-color: rgb(85, 85, 85);
-    border-radius: 50%;
-    padding: 6px;
-    font-size: 1.5rem !important;
-    margin-bottom: -2.5px;
-`;
-
 const Food = styled(LocalDining)`
     fill: rgb(235, 228, 218) !important;
     background-color: rgb(85, 85, 85);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { styled, keyframes } from 'styled-components'
 import LeftContainer from '../components/LandingPageComponents/LeftContainer';
 import AboutMe from '../components/LandingPageComponents/AboutMe';

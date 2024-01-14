@@ -1,22 +1,8 @@
 import React from 'react'
-import { styled, keyframes } from 'styled-components'
+import { styled } from 'styled-components'
 import grainy from '../images/grainy4.jpg'
 
-const fadeIn = keyframes`
-    from {
-        opacity: 0;
-    } to {
-        opacity: 1;
-    }
-`;
-
-const FadeInContainer = styled.div`
-    opacity: 0;
-    animation: fadeIn 0.85s forwards;
-`;
-
-const Container = styled(FadeInContainer)`
-    animation: ${fadeIn} 0.85s forwards;
+const Container = styled.div`
 `;
 
 const Circle = styled.div`

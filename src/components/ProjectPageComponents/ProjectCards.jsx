@@ -84,6 +84,36 @@ const ProjectCards = ({ setShowingDetails, showingDetails }) => {
     "'Meal Generator' was my first project done using React outside of work. So, it really gave me the freedom "
     + "to explore more interesting UI designs and make considerations about layouts on my own.";
 
+  const newsDescription = 
+  "This layout I created is from a Frontend Mentor challenge."
+  + " If you're unfamiliar with Frontend Mentor, it's a platform that puts out"
+  + " front-end projects and challenges you to recreate them given certain font and color guidelines.";
+
+  const newsMeaning = 
+    "Completing this project really helped me become more passionate about front-end web development. "
+    + "I had only learned HTML and CSS 1-2 months prior to taking on this challenge, so I was still unconfident "
+    + "about my knowledge and doubted whether front-end was right for me. However, I had so much fun and learned so many new things "
+    + "while completeing it. 'News Homepage' was the first application I had designed "
+    + "without a tutorial and really helped me feel more confident in and motivated to improve my front-end skills.";
+
+  const battleshipDescription = 
+    "Battleship was a console-based game I created for my OOD class."
+
+  const battleshipMeaning = 
+    "It was an interesting project to work on because it allowed me to implement "
+    + "concepts of model, view, and controller that we had learned in class. I also implemented "
+    + "optimized guessing strategies to give players a challenge. The one I chose is known as a "
+    + "hunt-and-target guessing algorithm.";
+
+  const plannerDescription = 
+    "This was also a project I created for my OOD class."
+    + " The aim of the project was to create a weekly planner to keep track of"
+    + "events and tasks.";
+
+  const plannerMeaning = 
+    "This project is special to me because I got to work with two other dedicated and talented people on it."
+    + " Each of us brought different strengths to the project and together we managed to bring our creative ideas to life.";
+
   return (
     <div>
       {!showingDetails && <Container>
@@ -138,8 +168,8 @@ const ProjectCards = ({ setShowingDetails, showingDetails }) => {
             projectImage={battleship}
             redirectLink="https://github.com/CS-3500-OOD/pa03-XinruiG2.git"
             setDetails={setShowingDetails}
-            description=""
-            meaning="" />}
+            description={battleshipDescription}
+            meaning={battleshipMeaning} />}
 
         {showPlanner && 
         <ProjectDetails 
@@ -148,8 +178,8 @@ const ProjectCards = ({ setShowingDetails, showingDetails }) => {
           projectImage={planner}
           redirectLink="https://github.com/CS-3500-OOD/pa05-miffies.git"
           setDetails={setShowingDetails}
-          description=""
-          meaning="" />}
+          description={plannerDescription}
+          meaning={plannerMeaning} />}
 
         {showNews && 
         <ProjectDetails 
@@ -158,8 +188,8 @@ const ProjectCards = ({ setShowingDetails, showingDetails }) => {
           projectImage={newsHomepage}
           redirectLink="https://github.com/XinruiG2/News-Homepage.git"
           setDetails={setShowingDetails}
-          description=""
-          meaning="" />}
+          description={newsDescription}
+          meaning={newsMeaning} />}
       </div>}
     </div>
   )

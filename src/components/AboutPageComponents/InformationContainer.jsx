@@ -48,11 +48,6 @@ const TidbitContainer = styled.div`
 
 const InformationContainer = () => {
 
-    const visitSong = () => {
-        const songUrl = 'https://open.spotify.com/album/34zREEtZQOmQbqFU4cIQuT';
-        window.open(songUrl, '_blank');
-    }
-
   return (
     <Container>
         <Background>

@@ -74,8 +74,6 @@ const Icon = styled.img`
 
 const Links = () => {
 
-    const mailto = "mailto:xinrui.ge24@gmail.com";
-
     function navigateToLinkedIn() {
         const newURL = 'https://www.linkedin.com/in/xinrui-ge-14b563262/';
         window.open(newURL, '_blank');
