@@ -98,12 +98,12 @@ const Links = () => {
         <Row>
             <HalfBubble
                 onClick={() => {
-                    window.location.href = 'mailto:xinrui.ge24@gmail.com';
+                    window.location.href = 'mailto:ge.xinr@northeastern.edu';
                 }}>
                 <Link
                 to='#'
                 style={{textDecoration: 'none', color: "rgb(29, 29, 29)"}}>
-                    xinrui.ge24@gmail.com
+                    ge.xinr@northeastern.edu
                 </Link>
             </HalfBubble>
             <HalfBubble>{'('}718{')'} 791-5306</HalfBubble>
