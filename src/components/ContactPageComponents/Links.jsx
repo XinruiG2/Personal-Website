@@ -75,7 +75,7 @@ const Icon = styled.img`
 const Links = () => {
 
     function navigateToLinkedIn() {
-        const newURL = 'https://www.linkedin.com/in/xinrui-ge-14b563262/';
+        const newURL = 'https://www.linkedin.com/in/xinrui-ge/';
         window.open(newURL, '_blank');
     }
 
