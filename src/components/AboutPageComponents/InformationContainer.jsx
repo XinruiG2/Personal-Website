@@ -60,7 +60,7 @@ const InformationContainer = () => {
         <Background>
             The more I explore this field, the more reasons I find to appreciate it. 
             Working in front-end devleopment allows me to have a real-world impact
-            through accessible design, user experience, and much more. To have this privilege
+            through accessible and usable design. To have this privilege
             is a joy, regardless of how small or big my impact is.
         </Background>
         <SectionHeader>Skills</SectionHeader>

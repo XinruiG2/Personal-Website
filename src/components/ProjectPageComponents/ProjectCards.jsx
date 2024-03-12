@@ -154,7 +154,7 @@ const ProjectCards = ({ setShowingDetails, showingDetails }) => {
         {showMeal && 
           <ProjectDetails 
             name="Meal Generator"
-            languages="Java"
+            languages="JavaScript, HTML, CSS"
             projectImage={mealGenerator}
             redirectLink="https://github.com/XinruiG2/Meal-Generator.git"
             setDetails={setShowingDetails}
@@ -164,7 +164,7 @@ const ProjectCards = ({ setShowingDetails, showingDetails }) => {
         {showBattleship && 
           <ProjectDetails 
             name="Battleship"
-            languages="JavaScript, HTML, CSS"
+            languages="Java"
             projectImage={battleship}
             redirectLink="https://github.com/CS-3500-OOD/pa03-XinruiG2.git"
             setDetails={setShowingDetails}
@@ -174,7 +174,7 @@ const ProjectCards = ({ setShowingDetails, showingDetails }) => {
         {showPlanner && 
         <ProjectDetails 
           name="Planner GUI"
-          languages="Java"
+          languages="Java, CSS"
           projectImage={planner}
           redirectLink="https://github.com/CS-3500-OOD/pa05-miffies.git"
           setDetails={setShowingDetails}

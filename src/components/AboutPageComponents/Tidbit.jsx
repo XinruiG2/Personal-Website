@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Headphones, LocalDining, AutoAwesome } from '@mui/icons-material';
+import { LocalDining, AutoAwesome } from '@mui/icons-material';
 
 const Container = styled.div`
     background-color: ${(props) => props.color};
