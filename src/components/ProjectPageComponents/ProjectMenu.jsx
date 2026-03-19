@@ -1,0 +1,55 @@
+import React from 'react'
+import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom';
+
+const Container = styled.div`
+    display: flex;
+    width: 27%;
+    justify-content: space-between;
+    margin-right: 0.32rem;
+    gap: 8px;
+`;
+
+const MenuOption = styled.div`
+    color: rgb(29, 29, 29);
+    font-size: 0.9rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      color: rgb(141, 150, 170);
+    }
+`;
+
+const ProjectMenu = ({ setDetails }) => {
+
+  const navigate = useNavigate();
+
+  const navigateToHome = () => {
+    navigate("/");
+  }
+
+  const navigateToProjects = () => {
+    setDetails(false);
+    navigate("/projects");
+  }
+
+  const navigateToExperience = () => {
+    navigate("/about-me");
+  }
+
+  const navigateToContact = () => {
+    navigate("/contact");
+  }
+
+  return (
+    <Container>
+        <MenuOption onClick={navigateToHome}>Home</MenuOption>
+        <MenuOption onClick={navigateToProjects}>Projects</MenuOption>
+        <MenuOption onClick={navigateToExperience}>About</MenuOption>
+        <MenuOption onClick={navigateToContact}>Contact</MenuOption>
+    </Container>
+  )
+}
+
+export default ProjectMenu
